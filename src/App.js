@@ -6,6 +6,14 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
+        <h1>Próximamente tienda con React js!!!</h1>
+      </header>
+      <footer class="footer">
+        <h3>Gabriel Ignacio Paez</h3>
+      </footer>
+      {/*<header className="App-header">
+        
+        <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -18,6 +26,8 @@ function App() {
           Learn React
         </a>
       </header>
+      */}
+      
     </div>
   );
 }
