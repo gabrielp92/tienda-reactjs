@@ -1,14 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import NavBar from './components/NavBar';
 
 function App() {
+
+  const styles = {
+    titulo: 'text-3xl font-bold font-sans hover:font-mono text-fuchsia-500'
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Próximamente tienda con React js!!!</h1>
+      <header>
+        <NavBar/> 
       </header>
-      <footer class="footer">
+      <main className="App-header">
+        <img src={logo} className="App-logo" alt="logo"/>
+        <h1 className={styles.titulo}>Próximamente tienda con React js!!!</h1>
+      </main>
+      <footer className="footer">
         <h3>Gabriel Ignacio Paez</h3>
       </footer>
       {/*<header className="App-header">
