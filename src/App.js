@@ -13,11 +13,11 @@ function App() {
       <header>
         <NavBar/> 
       </header>
-      <main className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <h1 className={styles.titulo}>Próximamente tienda con React js!!!</h1>
+      <main className="App-header bg-fuchsia-800">
+        {/*<img src={logo} className="App-logo" alt="logo"/>
+        <h1 className={styles.titulo}>Próximamente tienda con React js!!!</h1>*/}
       </main>
-      <footer className="footer">
+      <footer className="footer bg-primary">
         <h3>Gabriel Ignacio Paez</h3>
       </footer>
       {/*<header className="App-header">
