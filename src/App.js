@@ -5,10 +5,6 @@ import NavBar from './components/NavBar';
 
 function App() {
 
-  const styles = {
-    titulo: 'text-3xl font-bold font-sans hover:font-mono text-fuchsia-500'
-  }
-
   return (
     <div className="App">
       <header>
