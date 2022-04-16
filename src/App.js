@@ -1,4 +1,3 @@
-import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
@@ -10,7 +9,7 @@ function App() {
       <header>
         <NavBar/> 
       </header>
-      <main className="App-header bg-white">
+      <main className="App-header bg-primary-content">
         {/*
         <img src={logo} className="App-logo" alt="logo"/>
         <h1 className={styles.titulo}>Próximamente tienda con React js!!!</h1>
