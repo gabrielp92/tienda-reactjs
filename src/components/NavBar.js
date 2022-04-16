@@ -1,8 +1,8 @@
 const NavBar = () => {
 
   return (
-    <div>
-      <div className="navbar fixed flex justify-between bg-fuchsia-300 z-10">       
+
+        <div className="navbar fixed flex justify-between bg-fuchsia-300 z-10">       
           <div className="flex-1 order-2 sm:order-first">
             <a className="btn btn-ghost normal-case text-2xl font-bold text-fuchsia-800 sm:px-2">ShopSport</a>
           </div>
@@ -18,12 +18,11 @@ const NavBar = () => {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </label>
             {/*items mobile*/}
-            <ul tabIndex="0" className="dropdown-content menu sm:hidden p-2 w-56 bg-fuchsia-300 font-bold text-xl text-fuchsia-800">
-              <li><a>Calzado</a></li>
-              <li><a>Vestimenta</a></li>
+            <ul tabIndex="0" className="dropdown-content sm:hidden menu p-2 w-56 bg-fuchsia-300 font-bold text-xl text-fuchsia-800">
+              <li className="btn btn-ghost text-lg"><a>Calzado</a></li>
+              <li className="btn btn-ghost text-lg"><a>Vestimenta</a></li>
             </ul>
           </div>
-
           <div className="dropdown dropdown-end order-3 md:ml-12 sm:ml-8">
             <label tabIndex="0" className="btn btn-ghost btn-circle">
               <div className="indicator">
@@ -58,8 +57,7 @@ const NavBar = () => {
               <li><a>Logout</a></li>
             </ul>
           </div>
-      </div>
-    </div>
+        </div>
   )
 }
 

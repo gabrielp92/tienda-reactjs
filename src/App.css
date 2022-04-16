@@ -28,7 +28,7 @@
 }
 
 .footer {
-  color: white;
+  color: bg-fuchsia-800 ;
   display: flex;
   justify-content: center;
   opacity: 87%;
