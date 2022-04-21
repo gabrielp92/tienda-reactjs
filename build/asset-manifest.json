@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/tienda-reactjs/static/css/main.ee687005.css",
-    "main.js": "/tienda-reactjs/static/js/main.831382fe.js",
+    "main.css": "/tienda-reactjs/static/css/main.68c7e954.css",
+    "main.js": "/tienda-reactjs/static/js/main.6c72d826.js",
     "static/js/787.f3d9cf45.chunk.js": "/tienda-reactjs/static/js/787.f3d9cf45.chunk.js",
     "static/media/logo.svg": "/tienda-reactjs/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/tienda-reactjs/index.html",
-    "main.ee687005.css.map": "/tienda-reactjs/static/css/main.ee687005.css.map",
-    "main.831382fe.js.map": "/tienda-reactjs/static/js/main.831382fe.js.map",
+    "main.68c7e954.css.map": "/tienda-reactjs/static/css/main.68c7e954.css.map",
+    "main.6c72d826.js.map": "/tienda-reactjs/static/js/main.6c72d826.js.map",
     "787.f3d9cf45.chunk.js.map": "/tienda-reactjs/static/js/787.f3d9cf45.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ee687005.css",
-    "static/js/main.831382fe.js"
+    "static/css/main.68c7e954.css",
+    "static/js/main.6c72d826.js"
   ]
 }

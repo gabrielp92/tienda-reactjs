@@ -14,13 +14,18 @@ const ItemCount = ({stock, initial, onAdd}) => {
         if(count == 1)
           document.getElementById('agregarAlCarrito').disabled = disableBtn;
         if(count >= 1) 
-          setCount(onAdd(count,-1))
+          if(stockProd != 0)
+            setCount(onAdd(count,-1))
+          else
+            setCount(onAdd(count,-count))
       }}>-</button>
       <strong className="px-3 text-[2rem]">{count}</strong>
       <button className="btn btn-outline btn-primary border-2 text-[2rem]" onClick={() => {
+      
         if(count == 0 && stockProd !=0)
           document.getElementById('agregarAlCarrito').disabled = !disableBtn;
-        setCount(onAdd(count,1));
+        if(count < stockProd)  
+          setCount(onAdd(count,1));
       }}>+</button> 
     </div>
     <div>
@@ -31,7 +36,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
       if(stockProd - count == 0)
         document.getElementById('agregarAlCarrito').disabled = disableBtn;
       if(stockProd - count >= 0)
+      { 
         setStock(stockProd - count);
+        setCount(onAdd(count,-count));
+        document.getElementById('agregarAlCarrito').disabled = disableBtn;
+      };
     }}>Agregar al carrito</button>
   </div>
   )
