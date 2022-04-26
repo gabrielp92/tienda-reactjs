@@ -1,0 +1,37 @@
+import Item from "./Item"
+import {useEffect, useState} from "react"
+
+const ItemList = ({items}) => {
+
+  const [listaItems, setItems] = useState([])
+ 
+  useEffect(() => {
+          
+    const promesa = new Promise( (resolve,reject) => {    
+      setTimeout(() => {                
+        resolve(items);    
+      }, 2000);
+    });
+
+    promesa
+    .then( result => {
+      //promesa satisfecha
+      setItems(result);
+    })
+    .catch( err => {
+      console.log('promesa rechazada');
+    });
+
+  }, []);
+
+  return (
+    <>
+      {
+        listaItems.map( (item) => { return <Item key={item.id} imgUrl={item.imgUrl} titulo={item.titulo} marca={item.marca} precio={item.precio}/> })
+      }
+    </>
+  );
+
+}
+
+export default ItemList

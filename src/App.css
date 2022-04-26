@@ -20,7 +20,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(20px + 2vmin);
-  color: rgb(189, 74, 170);
 }
 
 .App-link {
@@ -28,7 +27,6 @@
 }
 
 .footer {
-  color: rgb(189, 74, 170);
   display: flex;
   justify-content: center;
   opacity: 87%;

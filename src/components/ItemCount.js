@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(initial);
   const [disableBtn, setDisableBtn] = useState('false');
   const [stockProd, setStock] = useState(stock);
 
