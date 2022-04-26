@@ -20,9 +20,9 @@ const NavBar = () => {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </label>
             {/*items mobile*/}
-            <ul tabIndex="0" className="dropdown-content sm:hidden menu p-2 w-56 bg-fuchsia-300 font-bold text-xl text-fuchsia-800">
-              <li className="btn btn-ghost text-lg"><a>Calzado</a></li>
-              <li className="btn btn-ghost text-lg"><a>Vestimenta</a></li>
+            <ul tabIndex="0" className="dropdown-content sm:hidden menu p-1 w-42 font-bold text-xl text-paleta-fondoNavbar bg-paleta-colorFondo">
+              <li className="btn btn-ghost text-md sm:text-lg"><a className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Calzado</a></li>
+              <li className="btn btn-ghost text-md sm:text-lg"><a className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Vestimenta</a></li>
             </ul>
           </div>
 
