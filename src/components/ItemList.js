@@ -27,7 +27,7 @@ const ItemList = ({items}) => {
   return (
     <>
       {
-        listaItems.map( (item) => { return <Item key={item.id} imgUrl={item.imgUrl} titulo={item.titulo} marca={item.marca} precio={item.precio}/> })
+        listaItems.map( (item) => { return <Item key={item.id} item={item} />})
       }
     </>
   );
