@@ -1,19 +1,21 @@
 {
   "files": {
-    "main.css": "/tienda-reactjs/static/css/main.389047b3.css",
-    "main.js": "/tienda-reactjs/static/js/main.3e10a10b.js",
+    "main.css": "/tienda-reactjs/static/css/main.17774191.css",
+    "main.js": "/tienda-reactjs/static/js/main.e3fd96f1.js",
     "static/js/787.f3d9cf45.chunk.js": "/tienda-reactjs/static/js/787.f3d9cf45.chunk.js",
     "static/media/nb327.jpg": "/tienda-reactjs/static/media/nb327.9e2d5a5b8011bf355069.jpg",
     "static/media/nb420v2.jpg": "/tienda-reactjs/static/media/nb420v2.6c2eab312c0d70002869.jpg",
+    "static/media/supercrossblast.jpg": "/tienda-reactjs/static/media/supercrossblast.b61bc737ca4ef54f1cc6.jpg",
+    "static/media/freshfoamlazr.jpg": "/tienda-reactjs/static/media/freshfoamlazr.b49a05087bfc4c143f90.jpg",
     "static/media/nbx901.jpg": "/tienda-reactjs/static/media/nbx901.5b879a16c57dfbc8397b.jpg",
     "static/media/574sport1.jpg": "/tienda-reactjs/static/media/574sport1.d9fc8e7888c40c684658.jpg",
     "index.html": "/tienda-reactjs/index.html",
-    "main.389047b3.css.map": "/tienda-reactjs/static/css/main.389047b3.css.map",
-    "main.3e10a10b.js.map": "/tienda-reactjs/static/js/main.3e10a10b.js.map",
+    "main.17774191.css.map": "/tienda-reactjs/static/css/main.17774191.css.map",
+    "main.e3fd96f1.js.map": "/tienda-reactjs/static/js/main.e3fd96f1.js.map",
     "787.f3d9cf45.chunk.js.map": "/tienda-reactjs/static/js/787.f3d9cf45.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.389047b3.css",
-    "static/js/main.3e10a10b.js"
+    "static/css/main.17774191.css",
+    "static/js/main.e3fd96f1.js"
   ]
 }

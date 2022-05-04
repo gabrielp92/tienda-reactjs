@@ -1,32 +1,34 @@
 import { useEffect, useState } from "react"
+import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
+import { productList } from './Productos';
 
-const ItemDetailContainer = ({item}) => {
+const ItemDetailContainer = () => {
+
+    const {itemId} = useParams()
 
     const [itemDetail, setItemDetail] = useState({})
 
     useEffect(() => {
-    
         getItem().then( result => {
-            setItemDetail(result);
+            setItemDetail(result.find( p => p.id == itemId ));
         })
     }, [])
-    
+
     /* retorna la promesa que resuelve con delay de 2 segundos */
     const getItem = () => {
 
         return new Promise((resolve,reject) => {
             setTimeout(() => {
-                resolve(item);
+                resolve(productList);
             }, 2000);
         });
     }
 
     return (
-       
-    <div>
-        <ItemDetail item={itemDetail}/>
-    </div>
+    <>
+        <ItemDetail item={itemDetail}/> 
+    </>
   )
 }
 export default ItemDetailContainer

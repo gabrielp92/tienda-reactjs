@@ -1,37 +1,50 @@
 import Item from "./Item"
 import {useEffect, useState} from "react"
+import { productList } from './Productos';
 
-const ItemList = ({items}) => {
+const ItemList = () => {
 
   const [listaItems, setItems] = useState([])
- 
-  useEffect(() => {
           
-    const promesa = new Promise( (resolve,reject) => {    
+  const promesa = new Promise( (resolve,reject) => {    
       setTimeout(() => {                
-        resolve(items);    
+        resolve(productList);    
       }, 2000);
     });
 
-    promesa
-    .then( result => {
-      //promesa satisfecha
-      setItems(result);
-    })
-    .catch( err => {
-      console.log('promesa rechazada');
-    });
+    const obtenerProductos = async () => {
+      try {
+        const result = await promesa;
+        setItems(result);
+      } catch (error) {
+        console.log(error + 'No se pueden mostrar los productos');
+      }
+    };
 
-  }, []);
-
+  useEffect(() => {
+    obtenerProductos();
+  }, [])
+  
   return (
     <>
       {
-        listaItems.map( (item) => { return <Item key={item.id} item={item} />})
+        listaItems.map( (item) => { 
+          return (
+            <Item 
+              key={item.id}
+              id={item.id}
+              imgUrl={item.imgUrl}
+              titulo={item.titulo}
+              marca={item.marca}
+              precio={item.precio}
+              stock={item.stock}
+              descripcion={item.descripcion}
+            />
+          )
+        })
       }
     </>
   );
-
 }
 
 export default ItemList

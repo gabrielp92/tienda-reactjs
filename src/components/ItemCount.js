@@ -2,12 +2,12 @@ import { useState } from "react";
 
 const ItemCount = ({stock, initial, onAdd}) => {
 
-  const [count, setCount] = useState(initial);
+  const [count, setCount] = useState(1);
   const [disableBtn, setDisableBtn] = useState('false');
   const [stockProd, setStock] = useState(stock);
 
   return (
-  <div className="flex-col m-3 mt-5 py-3 border-2 rounded-box">
+  <div className="flex-col m-3 mt-5 py-3 border-2 rounded-box h-min">
     <label className="text-fuchsia-500">Producto de la tienda</label>
     <div className="mt-3 mb-3 text-primary flex-row">
       <button className="btn btn-outline btn-primary border-2 text-[2rem]" onClick={() => {

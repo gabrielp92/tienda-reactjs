@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import CartWidget from "./CartWidget"
 
 const NavBar = () => {
@@ -6,12 +7,12 @@ const NavBar = () => {
 
         <div className="navbar fixed flex justify-between bg-paleta-fondoNavbar z-10">       
           <div className="flex-1 order-2 sm:order-first">
-            <a className="btn btn-ghost normal-case text-2xl font-bold text-paleta-colorNavbar sm:px-2">ShopSport</a>
+            <Link to={'/'} className="btn btn-ghost normal-case text-2xl font-bold text-paleta-colorNavbar sm:px-2">ShopSport</Link>
           </div>
           {/* items desktop */}
           <ul tabIndex="0" className="p-2 w-56 sm:flex hidden sm:order-2 bg-paleta-fondoNavbar text-paleta-colorFondo">
-              <li className="btn btn-ghost text-lg"><a>Calzado</a></li>
-              <li className="btn btn-ghost text-lg"><a>Vestimenta</a></li>
+              <li className="btn btn-ghost text-lg"><Link to='/category/calzado'>Calzado</Link></li>
+              <li className="btn btn-ghost text-lg"><Link to='/category/vestimenta'>Vestimenta</Link></li>
           </ul>
           {/* vista mobile */}
           <div className="dropdown dropdown-start order-1">
@@ -21,8 +22,8 @@ const NavBar = () => {
             </label>
             {/*items mobile*/}
             <ul tabIndex="0" className="dropdown-content sm:hidden menu p-1 w-42 font-bold text-xl text-paleta-fondoNavbar bg-paleta-colorFondo">
-              <li className="btn btn-ghost text-md sm:text-lg"><a className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Calzado</a></li>
-              <li className="btn btn-ghost text-md sm:text-lg"><a className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Vestimenta</a></li>
+              <li className="btn btn-ghost text-md sm:text-lg"><Link to='/category/calzado' className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Calzado</Link></li>
+              <li className="btn btn-ghost text-md sm:text-lg"><Link to='/category/vestimenta' className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Vestimenta</Link></li>
             </ul>
           </div>
 
