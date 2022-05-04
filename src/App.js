@@ -15,6 +15,7 @@ function App() {
         <main className="App-header bg-paleta-colorFondo">
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/tienda-reactjs' element={<ItemListContainer/>}/> {/* para que funcione bien gh-pages */}
           <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
           <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
         </Routes>
