@@ -1,6 +1,4 @@
 import ItemList from "./ItemList";
-
-const onAdd = (suma, num) => { return suma += num; };
  
 const ItemListContainer = () => {
   return (
