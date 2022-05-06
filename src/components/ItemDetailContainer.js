@@ -13,7 +13,7 @@ const ItemDetailContainer = () => {
         getItem().then( result => {
             setItemDetail(result.find( p => p.id == itemId ));
         })
-    }, [])
+    }, [itemId])
 
     /* retorna la promesa que resuelve con delay de 2 segundos */
     const getItem = () => {
