@@ -34,13 +34,13 @@ const ItemCount = ({stock, initial, onAdd}) => {
       <label>Cant. disponible:</label>
       <strong> {stockProd}</strong>
     </div>
-    <button className="shadow btn btn-sm md:btn-md px-3 border-paleta-fondoNavbar bg-paleta-fondoNavbar" onClick={(event) => {
+    <button className="shadow btn btn-sm md:btn-md px-3 border-paleta-fondoNavbar bg-paleta-fondoNavbar" onClick={() => {
       if(stockProd - count >= 0)
       { 
         setStock(stockProd - count);
+        onAdd(count);
         if(stockProd === count)
           setCount(0)
-        onAdd(event);
       }
       if(stockProd < count)
         setCount(1)

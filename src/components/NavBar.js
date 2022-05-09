@@ -29,23 +29,25 @@ const NavBar = () => {
 
           <CartWidget/>
           
+          {/*
           <div className="dropdown dropdown-end order-4 sm:pr-2">
             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
-                <img src="https://api.lorem.space/image/face?hash=33791" />
+                <img src="https://api.lorem.space/image/face?hash=33791" alt="" />
               </div>
             </label>
             <ul tabIndex="0" className="menu hover:bg-paleta-colorFondo menu-compact dropdown-content mt-3 p-2 shadow font-bold text-paleta-fondoNavbar bg-paleta-colorFondo rounded-box w-52">
               <li>
-                <a className="justify-between active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">
+                <a href="#" className="justify-between active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">
                   Profile
                   <span className="badge border-paleta-colorNavbar bg-paleta-colorNavbar">New</span>
                 </a>
               </li>
-              <li><a className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Settings</a></li>
-              <li><a className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Logout</a></li>
+              <li><a href="#" className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Settings</a></li>
+              <li><a href="#" className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Logout</a></li>
             </ul>
           </div>
+          */}
         </div>
   )
 }
