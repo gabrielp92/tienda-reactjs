@@ -26,9 +26,11 @@ const NavBar = () => {
               <li className="btn btn-ghost text-md sm:text-lg"><Link to='/category/vestimenta' className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Vestimenta</Link></li>
             </ul>
           </div>
-
-          <CartWidget/>
           
+          <CartWidget/>
+
+            
+                      
           {/*
           <div className="dropdown dropdown-end order-4 sm:pr-2">
             <label tabIndex="0" className="btn btn-ghost btn-circle avatar">

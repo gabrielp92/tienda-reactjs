@@ -1,13 +1,18 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { Link } from "react-router-dom"
+import { CartContext } from "../context/CartContext"
 import ItemCount from "./ItemCount"
 
 const ItemDetail = ({item}) => {
 
   const [isAddedToCart, setAddedToCart] = useState(false)
   const [quantityAdded, setQuantityAdded] = useState('')
-  
+
+  const {addItem} = useContext(CartContext)
+
   function onAdd(quantityToAdd) {
+
+    addItem(item,quantityToAdd)
     setAddedToCart(true)
     quantityToAdd === 1 ?
     setQuantityAdded('un producto agregado')
