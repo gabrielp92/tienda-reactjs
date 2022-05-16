@@ -4,7 +4,7 @@ import CartContext from "../context/CartContext"
 
 const Cart = () => {
 
-  const {cart, removeItem, clear, subTotal} = useContext(CartContext)
+  const {cart, removeItem, clear, subTotal, lessQuantity, moreQuantity} = useContext(CartContext)
 
   return (
     <>
@@ -21,7 +21,6 @@ const Cart = () => {
           </div>
         ):(
         <div className="w-full">
-
           <div>
             <div>
             {
@@ -33,12 +32,24 @@ const Cart = () => {
                         <div className="flex flex-nowrap flex-col items-start ml-4">
                           <p className="text-sm">{i.item.titulo}</p>
                           <p className="text-lg font-bold">${i.item.precio}</p>
+                          <span className="text-sm">stock: {i.item.stock}</span>
                         </div>
-                      
+                    
                     </div>
-                    {/*agregar boton para variar la cantidad de items */}
-
                     <div className="flex flex-nowrap md:justify-between md:items-center gap-x-4 p-3 ml-auto">
+                      <button className="btn btn-sm btn-circle btn-outline border-2 text-paleta-fondoNavbar font-bold" onClick={ () => {
+                        lessQuantity(i)
+                      }}
+                      >
+                        -
+                      </button>
+                      <span className="text-xl">{i.quantity}</span>
+                      <button className="btn btn-sm btn-circle btn-outline border-2 text-paleta-fondoNavbar font-bold" onClick={ () => {
+                        moreQuantity(i)
+                      }}
+                      >
+                        +
+                      </button>
                       <h2 className="text-xl lg:text-2xl font-bold">
                         ${i.item.precio * i.quantity}
                       </h2>

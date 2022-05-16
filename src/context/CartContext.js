@@ -1,3 +1,4 @@
+import { current } from "daisyui/src/colors";
 import { createContext, useEffect, useState } from "react"
 
 export const CartContext = createContext({
@@ -49,6 +50,24 @@ export const CartContextProvider = ( {children} ) => {
     return cart.reduce((subtotal, current) => subtotal + (current.item.precio * current.quantity), 0);
   }
 
+  const lessQuantity = (item) => {
+    const position = cart.indexOf(item);
+    if(cart[position].quantity > 1)
+    {
+      cart[position].quantity = parseInt(cart[position].quantity) - 1;
+      setCart(cart.concat([]));
+    }
+  }
+
+  const moreQuantity = (item) => {
+    const position = cart.indexOf(item);
+    if(cart[position].quantity < cart[position].item.stock)
+    {
+      cart[position].quantity = parseInt(cart[position].quantity) + 1;
+      setCart(cart.concat([]));
+    }
+  }
+
   const context = {
     cart,
     addItem,
@@ -56,7 +75,9 @@ export const CartContextProvider = ( {children} ) => {
     clear,
     isInCart,
     calcularCantProductos,
-    subTotal
+    subTotal,
+    lessQuantity,
+    moreQuantity
   };
 
   return (
