@@ -41,12 +41,22 @@ export const CartContextProvider = ( {children} ) => {
      return cart.some( i => i.item.id === id)
   }
 
+  const calcularCantProductos = () => {
+    return cart.reduce((cantidad, current) => cantidad + current.quantity, 0);
+  }
+
+  const subTotal = () => {
+    return cart.reduce((subtotal, current) => subtotal + (current.item.precio * current.quantity), 0);
+  }
+
   const context = {
     cart,
     addItem,
     removeItem,
     clear,
-    isInCart
+    isInCart,
+    calcularCantProductos,
+    subTotal
   };
 
   return (

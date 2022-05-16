@@ -1,18 +1,20 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { Link } from "react-router-dom"
 import CartContext from "../context/CartContext"
 
 const CartWidget = () => {
 
-  const {cart} = useContext(CartContext)
+  const {cart, calcularCantProductos, subTotal} = useContext(CartContext)
 
-  const calcularCantProductos = () => {
-    return cart.reduce((cantidad, current) => cantidad + current.quantity, 0);
-  }
-
-  const subTotal = () => {
-    return cart.reduce((subtotal, current) => subtotal + (current.item.precio * current.quantity), 0);
-  }
+  {/*
+  useEffect(() => {
+    
+  
+    return () => {
+      
+    }
+  }, [])*/}
+  
 
   return (
   <div className="dropdown dropdown-end order-3 md:ml-10 sm:ml-8">

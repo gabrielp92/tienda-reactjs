@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
+import Spinner from "./Spinner"
 import { productList } from './Productos';
 
 const ItemDetailContainer = () => {
@@ -8,10 +9,12 @@ const ItemDetailContainer = () => {
     const {itemId} = useParams()
 
     const [itemDetail, setItemDetail] = useState({})
+    const [loading, setLoading] = useState(true)
 
     useEffect(() => {
         getItem().then( result => {
             setItemDetail(result.find( p => p.id == itemId ));
+            setLoading(false)
         })
     }, [itemId])
 
@@ -20,14 +23,14 @@ const ItemDetailContainer = () => {
 
         return new Promise((resolve,reject) => {
             setTimeout(() => {
-                resolve(productList);
+                resolve(productList); 
             }, 2000);
         });
     }
 
     return (
     <>
-        <ItemDetail item={itemDetail}/> 
+        {loading ? <Spinner/> : <ItemDetail item={itemDetail}/> }
     </>
   )
 }
