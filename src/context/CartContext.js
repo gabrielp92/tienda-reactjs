@@ -1,5 +1,4 @@
-import { current } from "daisyui/src/colors";
-import { createContext, useEffect, useState } from "react"
+import { createContext, useState } from "react"
 
 export const CartContext = createContext({
   cart: [],
