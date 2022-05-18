@@ -1,21 +1,15 @@
 {
   "files": {
     "main.css": "/tienda-reactjs/static/css/main.5e532f0a.css",
-    "main.js": "/tienda-reactjs/static/js/main.2eacd45f.js",
+    "main.js": "/tienda-reactjs/static/js/main.460a1544.js",
     "static/js/787.f3d9cf45.chunk.js": "/tienda-reactjs/static/js/787.f3d9cf45.chunk.js",
-    "static/media/nb327.jpg": "/tienda-reactjs/static/media/nb327.9e2d5a5b8011bf355069.jpg",
-    "static/media/nb420v2.jpg": "/tienda-reactjs/static/media/nb420v2.6c2eab312c0d70002869.jpg",
-    "static/media/supercrossblast.jpg": "/tienda-reactjs/static/media/supercrossblast.b61bc737ca4ef54f1cc6.jpg",
-    "static/media/freshfoamlazr.jpg": "/tienda-reactjs/static/media/freshfoamlazr.b49a05087bfc4c143f90.jpg",
-    "static/media/nbx901.jpg": "/tienda-reactjs/static/media/nbx901.5b879a16c57dfbc8397b.jpg",
-    "static/media/574sport1.jpg": "/tienda-reactjs/static/media/574sport1.d9fc8e7888c40c684658.jpg",
     "index.html": "/tienda-reactjs/index.html",
     "main.5e532f0a.css.map": "/tienda-reactjs/static/css/main.5e532f0a.css.map",
-    "main.2eacd45f.js.map": "/tienda-reactjs/static/js/main.2eacd45f.js.map",
+    "main.460a1544.js.map": "/tienda-reactjs/static/js/main.460a1544.js.map",
     "787.f3d9cf45.chunk.js.map": "/tienda-reactjs/static/js/787.f3d9cf45.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5e532f0a.css",
-    "static/js/main.2eacd45f.js"
+    "static/js/main.460a1544.js"
   ]
 }

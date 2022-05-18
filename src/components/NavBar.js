@@ -1,8 +1,24 @@
 import { Link } from "react-router-dom"
 import CartWidget from "./CartWidget"
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import { useEffect, useState } from "react";
 
 const NavBar = () => {
 
+  const [categorias, setCategorias] = useState([])
+
+  useEffect(() => {
+    const db = getFirestore();
+    const categoryCollection = collection(db,'category')
+    getDocs(categoryCollection).then((snapshot)=>{
+
+      const categoriasAux = []
+      snapshot.docs.map(cat => { categoriasAux.push( { id:cat.id, ...cat.data()} )})
+      setCategorias(categoriasAux)
+    })
+   
+  }, [])
+  
   return (
 
         <div className="navbar fixed flex justify-between bg-paleta-fondoNavbar z-10">       
@@ -11,8 +27,9 @@ const NavBar = () => {
           </div>
           {/* items desktop */}
           <ul tabIndex="0" className="p-2 w-56 sm:flex hidden sm:order-2 bg-paleta-fondoNavbar text-paleta-colorFondo">
-              <li className="btn btn-ghost text-lg"><Link to='/category/calzado'>Calzado</Link></li>
-              <li className="btn btn-ghost text-lg"><Link to='/category/vestimenta'>Vestimenta</Link></li>
+            {
+              categorias.map( (c) =>{  return <li key={c.id} className="btn btn-ghost text-lg"><Link to={`/category/${c.key}`}>{c.title}</Link></li> })
+            }
           </ul>
           {/* vista mobile */}
           <div className="dropdown dropdown-start order-1">
@@ -22,8 +39,9 @@ const NavBar = () => {
             </label>
             {/*items mobile*/}
             <ul tabIndex="0" className="dropdown-content sm:hidden menu p-1 w-42 font-bold text-xl text-paleta-fondoNavbar bg-paleta-colorFondo">
-              <li className="btn btn-ghost text-md sm:text-lg"><Link to='/category/calzado' className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Calzado</Link></li>
-              <li className="btn btn-ghost text-md sm:text-lg"><Link to='/category/vestimenta' className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">Vestimenta</Link></li>
+            {
+              categorias.map( (c) =>{  return <li key={c.id} className="btn btn-ghost text-md sm:text-lg"><Link to={`/category/${c.key}`} className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">{c.title}</Link></li> })
+            }
             </ul>
           </div>
           <CartWidget/>
