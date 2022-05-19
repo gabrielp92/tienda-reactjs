@@ -1,7 +1,7 @@
 import Item from "./Item"
-import {useEffect, useState} from "react"
+import {useEffect, useRef, useState} from "react"
 import { useParams } from "react-router-dom"
-import { collection, getDocs, getFirestore } from 'firebase/firestore';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 const ItemList = () => {
 
@@ -11,8 +11,13 @@ const ItemList = () => {
   useEffect(() => {
 
     const db = getFirestore();
-    const itemsCollection = collection(db,'items')
-    getDocs(itemsCollection).then((snapshot) => {   
+    let q = undefined
+    if(categoryId === undefined)
+      q = collection(db,'items')
+    else
+      q = query( collection(db,'items'), where('category','==', categoryId))
+
+    getDocs(q).then((snapshot) => {   
       
       if(snapshot.size !== 0)
       {
@@ -26,7 +31,7 @@ const ItemList = () => {
   return (
     <>
       {
-        listaItems.filter((i) => { return (i.category === categoryId) || (categoryId === undefined)}).map( (item) => { 
+        listaItems.map( (item) => { 
           return (
             <Item 
               key={item.id}
