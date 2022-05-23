@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import { CartContextProvider } from './context/CartContext';
+import SaveCompra from './components/SaveCompra';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
             <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
             <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
             <Route path='/cart' element={<Cart/>}/>
+            <Route path='/cart/check-out' element={<SaveCompra/>}/>
           </Routes>
           </main>
           <footer className="footer font-bold bg-paleta-colorFondoFooter text-paleta-colorTextoFooter py-2">
