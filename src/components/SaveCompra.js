@@ -8,10 +8,25 @@ const SaveCompra = () => {
     const { cart, clear, subTotal} = useContext(CartContext)
     const [orderId, setOrderId] = useState(null)
 
+    const [nombre, setNombre] = useState('')
+    const [telefono, setTelefono] = useState('')
+    const [correo, setCorreo] = useState('')
+    const [styleBtnPagar, setStyleBtnPagar] = useState('btn btn-primary btn-disabled')
+
     const buyer = {
-        name: 'gabriel paez',
-        phone: '+5492932441606',
-        email: 'gpaez1992@gmail.com' 
+        name: nombre,
+        phone: telefono,
+        email: correo
+    }
+
+    const expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
+
+    const camposValidos = () => {
+
+        if(expr.test(correo) && (nombre !== '') && (telefono !== '') && (correo !== ''))
+            setStyleBtnPagar('btn btn-primary')
+        else
+            setStyleBtnPagar('btn btn-primary btn-disabled')
     }
 
     const sendOrder = () => { 
@@ -29,7 +44,6 @@ const SaveCompra = () => {
             setOrderId(id)
             clear() // se vacía el carrito
         })
-       
     }
 
 return (
@@ -46,9 +60,57 @@ return (
                 </button>
             </div>
             : 
-            <button onClick={sendOrder} className="btn border-2 text-paleta-colorTextoButton font-bold px-2">
-                pagar
-            </button>
+            <div className="hero min-h-screen bg-base-200">
+                <div className="hero-content flex-col lg:flex-row-reverse">
+                    <div className="text-center lg:text-left">
+                        <h1 className="text-4xl md:text-5xl font-bold">Completá el formulario</h1>
+                        <p className="py-6 text-xl md:text-3xl">Para finalizar la compra primero debe completar este formulario con sus datos de contacto.</p>
+                    </div>
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                        <div className="card-body">
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Nombre</span>
+                                </label>
+                                <input type="text" placeholder="Nombre" className="input input-bordered" onChange={
+                                    event => { 
+                                        setNombre(event.target.value)
+                                        camposValidos()
+                                    }  
+                                } 
+                                />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Teléfono</span>
+                                </label>
+                                <input type="text" placeholder="Teléfono" className="input input-bordered" onChange={
+                                    event => { 
+                                        setTelefono(event.target.value) 
+                                        camposValidos()
+                                    }          
+                                }
+                                />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
+                                    <span className="label-text">Correo</span>
+                                </label>
+                                <input type="text" placeholder="Correo electrónico" className="input input-bordered" onChange={
+                                    event => { 
+                                        setCorreo(event.target.value) 
+                                        camposValidos()
+                                    }
+                                }                                
+                                />
+                            </div>
+                            <div className="form-control mt-6">
+                                <button className={styleBtnPagar} onClick={sendOrder}>pagar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         } 
     </>
 )
