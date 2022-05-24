@@ -1,26 +1,26 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { initializeApp } from "firebase/app";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAIa5Tc5LjSGLa6LwldX9f8bYdc6uHRIgw",
-  authDomain: "coder-tienda-react.firebaseapp.com",
-  projectId: "coder-tienda-react",
-  storageBucket: "coder-tienda-react.appspot.com",
-  messagingSenderId: "118301870276",
-  appId: "1:118301870276:web:93021c3164e1bf30bfe191"
+  apiKey: REACT_APP_APIKEY,
+  authDomain: REACT_APP_AUTHDOMAIN,
+  projectId: REACT_APP_PROJECTID,
+  storageBucket: REACT_APP_STORAGEBUCKET,
+  messagingSenderId: REACT_APP_MESSAGINGSENDERID,
+  appId: REACT_APP_APPID
 };
 
 const app = initializeApp(firebaseConfig);
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

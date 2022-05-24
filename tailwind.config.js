@@ -8,18 +8,18 @@ module.exports = {
     {
       'paleta':
       {
-        'fondoNavbar': '#164A41', //Dark Green
-        'colorNavbar': '#F1B24A', //Natural Yellow
-        'colorTextCart':'#4D774E', //Medium Green
-        'colorFondo': '#9DC88D',  //Light Green
+        'fondoNavbar': '#18181B', // Zinc 900
+        'colorNavbar': '#DC2626', // Red 600
+        'colorTextCart':'#4D774E',
+        'colorFondo': '#F4F4F5',  // Zinc 100
         'colorButton': '#164A41', //Dark Green
         'colorButtonHover': '#4D774E', //Medium Green
         'colorTextoButton': '#ffffff', //white
         'colorBordeCard': '#9DC88D', //Natural Yellow 
         'colorFondoCard': '#FFFFFF', //white
         'colorTextoCard': '#4D774E', //Medium Green
-        'colorFondoFooter': '#4D774E', //Medium Green
-        'colorTextoFooter': '#9DC88D',  //Light Green
+        'colorFondoFooter': '#18181B', // Zinc 900
+        'colorTextoFooter': '#F4F4F5', // Zinc 100
 
       }
     }
