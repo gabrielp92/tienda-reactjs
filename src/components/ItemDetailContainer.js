@@ -27,9 +27,9 @@ const ItemDetailContainer = () => {
     }, [itemId])
 
     return (
-    <>
+    <div className="mt-20 sm:mt-24">
         {loading ? <Spinner/> : <ItemDetail item={itemDetail}/> }
-    </>
+    </div>
   )
 }
 export default ItemDetailContainer

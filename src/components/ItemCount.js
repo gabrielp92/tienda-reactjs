@@ -22,11 +22,11 @@ const ItemCount = ({stock, initial, onAdd}) => {
   return (
   <div className="flex-col mt-0 pt-3 h-min">
     <div className="mb-3 text-paleta-colorTextoCard flex-row">
-      <button id="decrement" className="btn btn-outline border-2 text-paleta-colorTextoCard text-[1rem]" onClick={(event) => {
+      <button id="decrement" className="btn btn-outline border-2 text-paleta-colorTextoCard hover:bg-paleta-colorButton text-[1rem]" onClick={(event) => {
           modifyAmount(event);
       }}>-</button>
       <strong className="px-3 text-[1.5rem]">{count}</strong>
-      <button id="increment" className="btn btn-outline border-2 text-paleta-colorTextoCard text-[1rem]" onClick={(event) => {
+      <button id="increment" className="btn btn-outline border-2 text-paleta-colorTextoCard hover:bg-paleta-colorButton text-[1rem]" onClick={(event) => {
           modifyAmount(event);
       }}>+</button>
     </div>
@@ -34,7 +34,7 @@ const ItemCount = ({stock, initial, onAdd}) => {
       <label>Cant. disponible:</label>
       <strong> {stockProd}</strong>
     </div>
-    <button className="shadow btn btn-sm md:btn-md px-3 border-paleta-fondoNavbar bg-paleta-fondoNavbar" onClick={() => {
+    <button className="shadow btn btn-sm md:btn-md px-3 bg-paleta-colorButton hover:bg-paleta-colorNavbar hover:border-paleta-colorNavbar" onClick={() => {
       if(stockProd - count >= 0)
       { 
         setStock(stockProd - count);

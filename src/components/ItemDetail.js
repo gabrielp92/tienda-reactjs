@@ -22,10 +22,10 @@ const ItemDetail = ({item}) => {
   return (
     <>
       <div className="card lg:card-side bg-base-100 shadow-xl content-start mb-4 mt-0 mx-2 lg:mx-4">
-        <figure><img className="w-4/6 lg:w-auto" src={item.imgUrl} alt="Imagen"/></figure>
+        <figure><img className="w-4/6 lg:w-auto" src={item.imgUrl} alt="Imagen producto"/></figure>
         <div className="card-body">
-          <h2 className="card-title text-lg lg:text-4xl justify-center text-paleta-fondoNavbar">{item.titulo}</h2>
-          <p className="font-bold lg:text-4xl">${item.precio}</p>
+          <h2 className="card-title text-lg lg:text-4xl justify-center text-paleta-textoCard">{item.titulo}</h2>
+          <p className="lg:text-4xl">${item.precio},00</p>
           <p className="text-justify text-lg lg:text-2xl md:mt-4">{item.descripcion}</p>
           {
             isAddedToCart ? 
@@ -33,7 +33,7 @@ const ItemDetail = ({item}) => {
               <p className="font-bold italic text-2xl">Agregado al carrito</p>
               <p className="text-xl">{quantityAdded}</p>
               <Link to='/cart'>
-                <button className="shadow btn btn-sm md:btn-md px-3 border-paleta-fondoNavbar bg-paleta-fondoNavbar">ir al carrito</button>
+                <button className="shadow btn btn-sm md:btn-md px-3 bg-paleta-fondoNavbar hover:bg-paleta-colorNavbar hover:border-paleta-colorNavbar">ir al carrito</button>
               </Link>
             </div>
             : <ItemCount stock={item.stock} initial="1" onAdd={onAdd}/>

@@ -13,7 +13,7 @@ function App() {
     <CartContextProvider>
       <BrowserRouter>
         <div className="App bg-paleta-colorFondo">
-          <header className="h-20 sm:h-28">
+          <header>
             <NavBar/>
           </header>
           <main className="App-header bg-paleta-colorFondo">

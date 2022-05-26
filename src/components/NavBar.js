@@ -21,12 +21,12 @@ const NavBar = () => {
   
   return (
 
-        <div className="navbar fixed flex justify-between bg-paleta-fondoNavbar z-10">       
+        <div className="navbar fixed flex justify-between bg-paleta-fondoNavbar z-10 border-b-2 border-b-paleta-colorFondo bg-gradient-to-r from-paleta-colorNavbar via-paleta-colorNavbarMedio to-paleta-fondoNavbar">       
           <div className="flex-1 order-2 sm:order-first">
-            <Link to={'/'} className="btn btn-ghost normal-case text-2xl font-bold text-paleta-colorNavbar sm:px-2">ShopSport</Link>
+            <Link to={'/'} className="btn btn-ghost normal-case text-2xl font-bold text-paleta-colorFondo hover:bg-transparent sm:px-2">ShopSport</Link>
           </div>
           {/* items desktop */}
-          <ul tabIndex="0" className="p-1 w-56 sm:flex hidden sm:order-2 bg-paleta-fondoNavbar text-paleta-colorFondo">
+          <ul tabIndex="0" className="p-1 w-56 sm:flex hidden sm:order-2 bg-transparent text-paleta-colorFondo">
             {
               categorias.map( (c) =>{  return <li key={c.id} className="btn btn-ghost text-lg"><Link to={`/category/${c.key}`}>{c.title}</Link></li> })
             }
@@ -38,7 +38,7 @@ const NavBar = () => {
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="inline-block w-5 h-5" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </label>
             {/*items mobile*/}
-            <ul tabIndex="0" className="dropdown-content sm:hidden menu p-1 w-42 font-bold text-xl text-paleta-fondoNavbar bg-paleta-colorFondo">
+            <ul tabIndex="0" className="dropdown-content sm:hidden menu p-1 w-42 font-bold text-xl text-paleta-colorTextoButton bg-paleta-colorNavbar">
             {
               categorias.map( (c) =>{  return <li key={c.id} className="btn btn-ghost text-md sm:text-lg"><Link to={`/category/${c.key}`} className="active:text-paleta-fondoNavbar active:bg-paleta-colorFondo">{c.title}</Link></li> })
             }

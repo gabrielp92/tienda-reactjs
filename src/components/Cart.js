@@ -7,7 +7,7 @@ const Cart = () => {
   const {cart, removeItem, clear, subTotal, lessQuantity, moreQuantity} = useContext(CartContext)
 
   return (
-    <>
+    <div className="mt-20 sm:mt-24">
       {
         cart.length === 0 ? (
           <div className="text-paleta-fondoNavbar">
@@ -57,7 +57,7 @@ const Cart = () => {
                           removeItem(i.item.id);
                         }}
                       >
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
                       </button>
                     </div>
                 </div>
@@ -72,14 +72,14 @@ const Cart = () => {
               <h1 className="my-0 font-bold">${subTotal()}</h1>
             </div>
             <div className="flex flex-wrap flex-row justify-center gap-3 md:gap-5">
-              <button className="btn btn-sm md:btn-md border-paleta-colorNavbar bg-paleta-colorNavbar font-bold text-paleta-fondoNavbar hover:text-paleta-colorTextoButton"
+              <button className="btn btn-outline btn-sm md:btn-md border-paleta-colorNavbar text-paleta-colorNavbar hover:text-paleta-colorTextoButton hover:bg-paleta-colorButton"
                 onClick={() => {
                   clear();
                 }}
               >
                 Vaciar carrito
               </button>
-              <button className="btn btn-sm md:btn-md border-paleta-fondoNavbar bg-paleta-fondoNavbar font-bold">
+              <button className="btn btn-sm md:btn-md border-paleta-fondoNavbar bg-paleta-fondoNavbar hover:border-paleta-colorNavbar hover:bg-paleta-colorNavbar">
                 <Link to='/cart/check-out'>
                   Terminar compra
                 </Link>
@@ -90,7 +90,7 @@ const Cart = () => {
         </div>
         )
       }
-    </>
+    </div>
   )
 }
 export default Cart
