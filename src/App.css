@@ -11,13 +11,6 @@
   font-size: calc(20px + 2vmin);
 }
 
-/*
-.footer {
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}*/
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
