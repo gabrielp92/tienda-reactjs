@@ -1,10 +1,10 @@
 import ItemList from "./ItemList";
-import Header from './Header';
+import Hero from './Hero';
  
 const ItemListContainer = () => {
   return (
     <div className="flex flex-auto flex-wrap justify-center">
-      <Header/>
+      <Hero/>
       <ItemList/>
     </div>
   )

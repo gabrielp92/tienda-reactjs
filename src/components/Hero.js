@@ -1,4 +1,4 @@
-const Header = () => {
+const Hero = () => {
 
     const source = 'https://firebasestorage.googleapis.com/v0/b/coder-tienda-react.appspot.com/o/header%2FbannerHeader.png?alt=media&token=75fb6890-b96c-4c99-b885-2535594bb90c'
   
@@ -8,4 +8,4 @@ const Header = () => {
         </>
       )
 }
-export default Header
+export default Hero
