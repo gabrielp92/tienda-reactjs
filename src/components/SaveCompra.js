@@ -50,7 +50,7 @@ return (
     <div className="mt-20 sm:mt-24">  
         {
             orderId != null ?
-            <div className="mt-6">
+            <div className="mt-32">
                 <h3 className="font-bold italic text-[1.1rem] md:text-[1.5rem] xl:text-[1.75rem] 2xl:text-[3.5rem]">Compra realizada exitosamente!</h3>
                 <p className="font-normal italic text-[1.1rem] md:text-[1.5rem] xl:text-[1.75rem] 2xl:text-[3.5rem]">id compra: {orderId}</p>
                 <button className="btn btn-outline font-bold mt-6 px-2 text-paleta-colorNavbar hover:bg-paleta-colorButton">

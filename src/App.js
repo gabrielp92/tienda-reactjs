@@ -6,6 +6,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Cart from './components/Cart';
 import { CartContextProvider } from './context/CartContext';
 import SaveCompra from './components/SaveCompra';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -17,18 +18,16 @@ function App() {
             <NavBar/>
           </header>
           <main className="App-header bg-paleta-colorFondo">
-          <Routes>
-            <Route path='/' element={<ItemListContainer/>}/>
-            <Route path='/tienda-reactjs' element={<ItemListContainer/>}/> {/* para que funcione bien gh-pages */}
-            <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
-            <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
-            <Route path='/cart' element={<Cart/>}/>
-            <Route path='/cart/check-out' element={<SaveCompra/>}/>
-          </Routes>
+            <Routes>
+              <Route path='/' element={<ItemListContainer/>}/>
+              <Route path='/tienda-reactjs' element={<ItemListContainer/>}/> {/* para que funcione bien gh-pages */}
+              <Route path='/item/:itemId' element={<ItemDetailContainer/>}/>
+              <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+              <Route path='/cart' element={<Cart/>}/>
+              <Route path='/cart/check-out' element={<SaveCompra/>}/>
+            </Routes>
           </main>
-          <footer className="footer font-bold bg-paleta-colorFondoFooter text-paleta-colorTextoFooter py-2">
-            <h3>Gabriel Ignacio Paez</h3>
-          </footer>
+          <Footer/>
         </div>   
       </BrowserRouter>
     </CartContextProvider>
