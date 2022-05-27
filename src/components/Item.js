@@ -4,7 +4,7 @@ const Item = ({id,imgUrl,titulo,marca,precio}) => {
 
   return (
     <div className="card card-compact w-72 sm:w-96 md:w-80 lg:w-96 bg-base-100 shadow-xl mb-10 mx-2 grow md:grow-0 lg:h-full h-min max-h-min">
-      <figure className="overflow-hidden"><img className="w-3/6 hover:scale-125" src={imgUrl} alt="Shoes"/></figure>
+      <figure className="overflow-hidden"><img className="w-3/6 hover:scale-125 touch-manipulation" src={imgUrl} alt="Shoes"/></figure>
       <div className="card-body text-paleta-colorTextoCard flex items-center">
         <div className="badge badge-outline mb-2">{marca}</div> 
         <h2 className="card-title font-medium justify-center">{titulo}</h2>

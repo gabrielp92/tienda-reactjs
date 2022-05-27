@@ -22,7 +22,7 @@ const ItemDetail = ({item}) => {
   return (
     <>
       <div className="card lg:card-side bg-base-100 shadow-xl content-start mb-4 mt-0 mx-2 lg:mx-4">
-        <figure><img className="w-4/6 lg:w-auto" src={item.imgUrl} alt="Imagen producto"/></figure>
+        <figure><img className="w-4/6 lg:w-auto touch-manipulation" src={item.imgUrl} alt="Imagen producto"/></figure>
         <div className="card-body">
           <h2 className="card-title text-lg lg:text-4xl justify-center text-paleta-textoCard">{item.titulo}</h2>
           <p className="lg:text-4xl">${item.precio},00</p>
