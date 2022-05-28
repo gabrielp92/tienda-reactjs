@@ -1,5 +1,5 @@
 # **Tienda Shop Sport** :shopping_cart:
-__
+
 ## *Proyecto de React JS Coderhouse*
 
 El proyecto se basa en un ecommerce que posee las siguientes características:
@@ -12,19 +12,17 @@ El proyecto se basa en un ecommerce que posee las siguientes características:
 
 Las categorías y los productos se cargan desde una base de datos creada en Firebase.
 
-__
-:large_blue_circle: ## Librerías utilizadas:
+## :large_blue_circle: Frameworks y librerías utilizadas:
 
 ### React.js
 
-### DaisyUI y Tailwind CSS:
-    - Para facilitar la parte de estilos del sitio, y centrar la atención en la lógica de React.js.
+- ### Tailwind CSS y Daisy UI:
+    - Para facilitar la creación de componentes y estilos del sitio, lo que permite centrar la atención en la lógica de React.js [(Ver instalación de Daisy UI)](https://daisyui.com/docs/install/).
 
-### FontAwesome:
-    - Para íconos utilizados en el footer del sitio.
+- ### React Icons:
+    - Para íconos utilizados en el footer del sitio [(ver instalación de React Icons))](https://react-icons.github.io/react-icons/).
 
-__
-:large_blue_circle: ##Instalación:
+## :large_blue_circle: Instalación:
 
 <!--Se requiere Node.js para iniciar.
 $ npm install-->
