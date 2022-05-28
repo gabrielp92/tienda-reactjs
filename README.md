@@ -22,12 +22,24 @@ Las categorías y los productos se cargan desde una base de datos creada en Fire
 - ### React Icons:
     - Para íconos utilizados en el footer del sitio [(ver instalación de React Icons))](https://react-icons.github.io/react-icons/).
 
-## :large_blue_circle: Instalación:
+## :large_blue_circle: Creación e Instalación:
 
+Este proyecto se inició con [Create React App](https://github.com/facebook/create-react-app).
+
+**Deberás tener instalado Node.js en tu sistema** [(descargar Node.js)](https://nodejs.org/es/download/).
+
+Para instalar las dependencias, en el directorio del proyecto ejecute: 
 ```
 $ npm install
 ```
-<!--Se requiere Node.js para iniciar.-->
+
+Para utilizar la aplicación en el modo de desarrollo, ejecute:
+```
+$ npm start
+````
+Abra [http://localhost:3000](http://localhost:3000) para verla en su navegador.
+
+La página se volverá a cargar cuando realice cambios.
 
 
 
