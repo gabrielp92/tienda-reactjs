@@ -1,7 +1,6 @@
 # **Tienda Shop Sport** :shopping_cart:
-
 ## *Proyecto de React JS Coderhouse*
-
+___
 El proyecto se basa en un ecommerce que posee las siguientes características:
 
 - Barra de navegación: link por categoría y carrito de compras (para los links se utiliza React Router).
@@ -12,6 +11,10 @@ El proyecto se basa en un ecommerce que posee las siguientes características:
 
 Las categorías y los productos se cargan desde una base de datos creada en Firebase [(Ver cómo utilizar Firebase)](https://firebase.google.com/docs/web/setup?hl=es).
 
+___
+![gif del sitio](public/compraShopSport.gif)
+
+___
 ## :large_blue_circle: Frameworks y librerías utilizadas:
 
 - ### React.js
@@ -22,6 +25,7 @@ Las categorías y los productos se cargan desde una base de datos creada en Fire
 - ### React Icons:
     - Para íconos utilizados en el footer del sitio [(ver instalación de React Icons))](https://react-icons.github.io/react-icons/).
 
+___
 ## :large_blue_circle: Creación e Instalación:
 
 Este proyecto se inició con [Create React App](https://github.com/facebook/create-react-app).
