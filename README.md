@@ -10,22 +10,25 @@ El proyecto se basa en un ecommerce que posee las siguientes características:
 - Filtrado de vistas por categoría.
 - Listado de todos los artículos disponibles en la página principal.
 
-Las categorías y los productos se cargan desde una base de datos creada en Firebase.
+Las categorías y los productos se cargan desde una base de datos creada en Firebase [(Ver cómo utilizar Firebase)](https://firebase.google.com/docs/web/setup?hl=es).
 
 ## :large_blue_circle: Frameworks y librerías utilizadas:
 
-### React.js
+- ### React.js
 
 - ### Tailwind CSS y Daisy UI:
-    - Para facilitar la creación de componentes y estilos del sitio, lo que permite centrar la atención en la lógica de React.js [(Ver instalación de Daisy UI)](https://daisyui.com/docs/install/).
+    - Para facilitar la creación de componentes y estilos del sitio, lo que permite centrar la atención en la lógica de React.js [(Ver instalación de Tailwind CSS para React)](https://tailwindcss.com/docs/guides/create-react-app) / [(Ver instalación de Daisy UI)](https://daisyui.com/docs/install/).
 
 - ### React Icons:
     - Para íconos utilizados en el footer del sitio [(ver instalación de React Icons))](https://react-icons.github.io/react-icons/).
 
 ## :large_blue_circle: Instalación:
 
-<!--Se requiere Node.js para iniciar.
-$ npm install-->
+```
+$ npm install
+```
+<!--Se requiere Node.js para iniciar.-->
+
 
 
 
