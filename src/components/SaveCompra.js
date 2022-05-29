@@ -51,16 +51,16 @@ return (
         {
             orderId != null ?
             <div className="mt-32">
-                <h3 className="font-bold italic text-[1.1rem] md:text-[1.5rem] xl:text-[1.75rem] 2xl:text-[3.5rem]">Compra realizada exitosamente!</h3>
+                <h3 className="font-bold italic text-[1.1rem] md:text-[1.5rem] xl:text-[1.75rem] 2xl:text-[3.5rem]">¡Compra realizada exitosamente!</h3>
                 <p className="font-normal italic text-[1.1rem] md:text-[1.5rem] xl:text-[1.75rem] 2xl:text-[3.5rem]">id compra: {orderId}</p>
-                <button className="btn btn-outline font-bold mt-6 px-2 text-paleta-colorNavbar hover:bg-paleta-colorButton">
+                <button className="btn font-bold mt-6 px-2 bg-paleta-colorNavbar hover:bg-paleta-colorButton">
                 <Link to='/'>
                     volver
                 </Link>    
                 </button>
             </div>
             : 
-            <div className="hero min-h-screen bg-base-200">
+            <div className="hero min-h-screen bg-base-200 mt-2 mb-8 shadow-xl shadow-paleta-colorShadowItem">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-bold">Completá el formulario</h1>

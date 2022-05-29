@@ -13,11 +13,11 @@ function App() {
   return (
     <CartContextProvider>
       <BrowserRouter>
-        <div className="App bg-paleta-colorFondo">
+        <div className="App bg-paleta-colorFondoContainer">
           <header>
             <NavBar/>
           </header>
-          <main className="App-header bg-paleta-colorFondo">
+          <main className="App-header text-paleta-colorFondoCard bg-paleta-colorFondoContainer">
             <Routes>
               <Route path='/' element={<ItemListContainer/>}/>
               <Route path='/tienda-reactjs' element={<ItemListContainer/>}/> {/* para que funcione bien gh-pages */}

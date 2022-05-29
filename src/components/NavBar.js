@@ -26,7 +26,7 @@ const NavBar = () => {
             <Link to={'/'} className="btn btn-ghost normal-case text-2xl font-bold text-paleta-colorFondo hover:bg-transparent sm:px-2">ShopSport</Link>
           </div>
           {/* items desktop */}
-          <ul tabIndex="0" className="p-1 w-56 sm:flex hidden sm:order-2 bg-transparent text-paleta-colorFondo">
+          <ul tabIndex="0" className="p-1 mr-44 md:mr-0 w-56 sm:flex hidden sm:order-2 bg-transparent text-paleta-colorFondo">
             {
               categorias.map( (c) =>{  return <li key={c.id} className="btn btn-ghost text-lg"><Link to={`/category/${c.key}`}>{c.title}</Link></li> })
             }

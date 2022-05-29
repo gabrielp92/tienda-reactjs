@@ -4,18 +4,18 @@ import CartContext from "../context/CartContext"
 
 const Cart = () => {
 
-  const {cart, removeItem, clear, subTotal, lessQuantity, moreQuantity} = useContext(CartContext)
+  const {cart, removeItem, calcularCantProductos, clear, subTotal, lessQuantity, moreQuantity} = useContext(CartContext)
 
   return (
     <div className="mt-20 sm:mt-24">
       {
         cart.length === 0 ? (
-          <div className="text-paleta-fondoNavbar">
+          <div className="text-paleta-colorFondoCard mt-40">
             <h1>Su carrito está vacío.</h1>
             <h3>
               Agregue algunos productos haciendo click
               <Link to="/">
-                <span className="font-bold"> aquí</span>
+                <span className="font-bold text-paleta-colorNavbar"> aquí</span>
               </Link>
             </h3>
           </div>
@@ -25,13 +25,13 @@ const Cart = () => {
             <div>
             {
               cart.map( i => (
-                <div key={i.item.id} className="flex flex-wrap justify-between bg-paleta-colorFondoCard mx-3 md:mx-6 lg:mx-12 mb-5 drop-shadow-xl">
+                <div key={i.item.id} className="flex flex-wrap justify-between text-paleta-colorTextoCard bg-paleta-colorFondoCard mx-3 md:mx-6 lg:mx-12 mb-5 shadow-lg shadow-paleta-colorShadowItem">
                     
                     <div className="flex h-fit md:text-2xl items-center">
                         <img src={i.item.imgUrl} className="w-24 md:ml-8" alt={i.item.titulo}/>
                         <div className="flex flex-nowrap flex-col items-start ml-4">
-                          <p className="text-sm">{i.item.titulo}</p>
-                          <p className="text-lg font-bold">${i.item.precio}</p>
+                          <p className="text-sm font-medium">{i.item.titulo}</p>
+                          <p className="text-lg font-medium">${i.item.precio},00</p>
                           <span className="text-sm">stock: {i.item.stock}</span>
                         </div>
                     
@@ -43,7 +43,7 @@ const Cart = () => {
                       >
                         -
                       </button>
-                      <span className="text-xl">{i.quantity}</span>
+                      <span className="text-xl font-medium">{i.quantity}</span>
                       <button className="btn btn-sm btn-circle btn-outline border-2 text-paleta-fondoNavbar font-bold" onClick={ () => {
                         moreQuantity(i)
                       }}
@@ -51,7 +51,7 @@ const Cart = () => {
                         +
                       </button>
                       <h2 className="text-xl lg:text-2xl font-bold">
-                        ${i.item.precio * i.quantity}
+                        ${i.item.precio * i.quantity},00
                       </h2>
                       <button className="btn btn-sm md:btn-md btn-circle btn-outline md:ml-4 md:mr-8" onClick={() => {
                           removeItem(i.item.id);
@@ -66,10 +66,11 @@ const Cart = () => {
             </div>
           </div>
 
-          <div className="bg-paleta-colorFondoCard mx-3 md:mx-6 lg:mx-12 my-5 drop-shadow-xl p-4">
-            <div className="flex flex-col mb-4 text-xl lg:text-2xl">
-              <h1 className="leading-none lg:leading-tight my-0">El total de su compra es</h1>
-              <h1 className="my-0 font-bold">${subTotal()}</h1>
+          <div className="text-paleta-colorTextoCard bg-paleta-colorFondoCard mx-3 md:mx-6 lg:mx-12 my-5 shadow-xl shadow-paleta-colorShadowItem p-4">
+            <div className="flex flex-col mb-4 text-xl lg:text-2xl border-solid">
+              <h2 className="font-medium mb-2">{calcularCantProductos()} productos en el carrito</h2>
+              <h1 className="font-ultralight leading-none lg:leading-tight my-0">El total de su compra es</h1>
+              <h1 className="my-0 mb-3 font-bold">${subTotal()},00</h1>
             </div>
             <div className="flex flex-wrap flex-row justify-center gap-3 md:gap-5">
               <button className="btn btn-outline btn-sm md:btn-md border-paleta-colorNavbar text-paleta-colorNavbar hover:text-paleta-colorTextoButton hover:bg-paleta-colorButton"

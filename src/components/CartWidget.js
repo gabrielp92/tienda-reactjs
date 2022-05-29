@@ -14,7 +14,7 @@ const CartWidget = () => {
         <span className="badge bg-paleta-colorNavbar badge-sm indicator-item">{calcularCantProductos()}</span>
       </div>
     </label>
-    <div tabIndex="0" className="mt-3 card card-compact dropdown-content w-52 bg-paleta-colorFondo shadow">
+    <div tabIndex="0" className="mt-3 card card-compact dropdown-content w-52 bg-paleta-colorFondoWidget shadow">
       <div className="card-body">
         <span className="font-bold text-lg text-paleta-fondoNavbar">{calcularCantProductos()} Productos</span>
         <span className="text-paleta-colorTextoCart">Subtotal: ${subTotal()}</span>

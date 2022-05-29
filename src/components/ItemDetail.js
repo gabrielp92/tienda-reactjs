@@ -21,10 +21,10 @@ const ItemDetail = ({item}) => {
 
   return (
     <>
-      <div className="card lg:card-side bg-base-100 shadow-xl content-start mb-4 mt-0 mx-2 lg:mx-4">
+      <div className="card lg:card-side bg-base-100 shadow-xl shadow-paleta-colorShadowItem content-start mb-8 mt-2 mx-2 lg:mx-4">
         <figure className="touch-manipulation"><img className="w-4/6 lg:w-auto" src={item.imgUrl} alt="Imagen producto"/></figure>
-        <div className="card-body">
-          <h2 className="card-title text-lg lg:text-4xl justify-center text-paleta-textoCard">{item.titulo}</h2>
+        <div className="card-body text-paleta-colorTextoCard">
+          <h2 className="card-title text-lg lg:text-4xl justify-center">{item.titulo}</h2>
           <p className="lg:text-4xl">${item.precio},00</p>
           <p className="text-justify text-lg lg:text-2xl md:mt-4">{item.descripcion}</p>
           {

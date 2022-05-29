@@ -1,7 +1,7 @@
 # **Tienda Shop Sport** :shopping_cart:
 ## *Proyecto de React JS Coderhouse*
 ___
-El proyecto se basa en un ecommerce que posee las siguientes características:
+El proyecto se basa en un e-commerce que posee las siguientes características:
 
 - Barra de navegación: link por categoría y carrito de compras (para los links se utiliza React Router).
 - Carrito de compras.
