@@ -25,7 +25,7 @@ const Cart = () => {
             <div>
             {
               cart.map( i => (
-                <div key={i.item.id} className="flex flex-wrap justify-between text-paleta-colorTextoCard bg-paleta-colorFondoCard mx-3 md:mx-6 lg:mx-12 mb-5 shadow-lg shadow-paleta-colorShadowItem">
+                <div key={i.item.id} className="flex flex-wrap justify-between text-paleta-colorTextoCard bg-paleta-colorFondoCard mx-3 md:mx-6 lg:mx-12 mb-5 shadow-2xl shadow-paleta-colorShadowItem">
                     
                     <div className="flex h-fit md:text-2xl items-center">
                         <img src={i.item.imgUrl} className="w-24 md:ml-8" alt={i.item.titulo}/>

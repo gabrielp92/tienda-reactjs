@@ -11,7 +11,10 @@ const SaveCompra = () => {
     const [nombre, setNombre] = useState('')
     const [telefono, setTelefono] = useState('')
     const [correo, setCorreo] = useState('')
+    const [verifCorreo, setVerifCorreo] = useState('')
+    const [mensajeVerifCorreo, setMensajeVerifCorreo] = useState('')
     const [styleBtnPagar, setStyleBtnPagar] = useState('btn btn-primary btn-disabled')
+    const [styleInputVerifCorreo, setStyleInputVerifCorreo] = useState('form-control hidden')
 
     const buyer = {
         name: nombre,
@@ -21,9 +24,24 @@ const SaveCompra = () => {
 
     const expr = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/
 
+    const esCorreo = () => {
+        if(expr.test(correo))
+            setStyleInputVerifCorreo('form-control')
+        else
+            setStyleInputVerifCorreo('form-control hidden')
+        return expr.test(correo)
+    }
+
+    const correoValido = () => {
+        if(correo !== verifCorreo)
+            setMensajeVerifCorreo('correo mal ingresado')
+        else
+            setMensajeVerifCorreo('')
+    }
+
     const camposValidos = () => {
 
-        if(expr.test(correo) && (nombre !== '') && (telefono !== '') && (correo !== ''))
+        if(esCorreo() && (correo === verifCorreo) && (nombre !== '') && (telefono !== '') && (correo !== ''))
             setStyleBtnPagar('btn btn-primary btn-accent')
         else
             setStyleBtnPagar('btn btn-primary btn-disabled')
@@ -53,14 +71,14 @@ return (
             <div className="mt-32">
                 <h3 className="font-bold italic text-[1.1rem] md:text-[1.5rem] xl:text-[1.75rem] 2xl:text-[3.5rem]">¡Compra realizada exitosamente!</h3>
                 <p className="font-normal italic text-[1.1rem] md:text-[1.5rem] xl:text-[1.75rem] 2xl:text-[3.5rem]">id compra: {orderId}</p>
-                <button className="btn font-bold mt-6 px-2 bg-paleta-colorNavbar hover:bg-paleta-colorButton">
+                <button className="btn font-bold mt-6 px-2 bg-paleta-colorNavbar border-paleta-colorNavbar hover:bg-paleta-colorButton">
                 <Link to='/'>
                     volver
                 </Link>    
                 </button>
             </div>
             : 
-            <div className="hero min-h-screen bg-base-200 mt-2 mb-8 shadow-xl shadow-paleta-colorShadowItem">
+            <div className="hero min-h-screen bg-base-200 mt-2 mb-8 text-paleta-colorTextoCard shadow-2xl shadow-paleta-colorShadowItem">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-bold">Completá el formulario</h1>
@@ -70,9 +88,9 @@ return (
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">
-                                    <span className="label-text">Nombre</span>
+                                    <span className="label-text">Nombre y apellido</span>
                                 </label>
-                                <input type="text" placeholder="Nombre" className="input input-bordered" onChange={
+                                <input type="text" placeholder="Nombre y apellido" className="input input-bordered" onChange={
                                     event => { 
                                         setNombre(event.target.value)
                                         camposValidos()
@@ -104,6 +122,47 @@ return (
                                 }                                
                                 />
                             </div>
+                            { 
+                                expr.test(correo) ? 
+                                <div className={styleInputVerifCorreo}>
+                                    <label className="label">
+                                        <span className="label-text">Verificar Correo</span>
+                                    </label>
+                                    <input type="text" placeholder="Ingrese nuevamente el correo electrónico" className="input input-bordered"
+                                    onChange={
+                                        event => { 
+                                            setVerifCorreo(event.target.value)
+                                            correoValido()
+                                            camposValidos()
+                                        }
+                                    }
+                                    onBlur={
+                                        event => { 
+                                            setVerifCorreo(event.target.value)
+                                            correoValido()
+                                            camposValidos()  
+                                        }
+                                    }  
+                                    onFocus={
+                                        event => { 
+                                            setVerifCorreo(event.target.value)
+                                            correoValido()
+                                            camposValidos()
+                                        }
+                                    }
+                                    onClick={
+                                        event => {      
+                                            setVerifCorreo(event.target.value)
+                                            correoValido()
+                                            camposValidos()                          
+                                        }
+                                    }                          
+                                    />
+                                    <div className="text-left text-[1rem] text-paleta-colorNavbar">{mensajeVerifCorreo}</div>
+                                </div>
+                                :
+                                <div></div>
+                            }
                             <div className="form-control mt-6">
                                 <button className={styleBtnPagar} onClick={sendOrder}>pagar</button>
                             </div>

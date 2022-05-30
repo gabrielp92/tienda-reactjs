@@ -8,19 +8,19 @@ module.exports = {
     {
       'paleta':
       {
-        'fondoNavbar': '#141416',
+        'fondoNavbar': '#161416',
         'colorNavbar': '#DC2626', // Red 600
         'colorNavbarMedio':'#7f1d1d', //Red 900
         'colorFondoWidget': '#e4e4e7',
         'colorFondo': '#F4F4F5',  // Zinc 100
-        'colorFondoContainer': '#404040',
-        'colorShadowItem': '#141416',
-        'colorButton': '#141416',
-        'colorButtonHover': '#141416',
+        'colorFondoContainer': '#818479',
+        'colorShadowItem': '#161416',
+        'colorButton': '#161416',
+        'colorButtonHover': '#161416',
         'colorTextoButton': '#FFFFFF', //white
         'colorFondoCard': '#FFFFFF', //white
-        'colorTextoCard': '#141416',
-        'colorFondoFooter': '#141416',
+        'colorTextoCard': '#161416',
+        'colorFondoFooter': '#161416',
         'colorTextoFooter': '#F4F4F5', // Zinc 100
       }
     }
