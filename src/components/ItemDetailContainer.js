@@ -10,6 +10,7 @@ const ItemDetailContainer = () => {
 
     const [itemDetail, setItemDetail] = useState({})
     const [loading, setLoading] = useState(true)
+    const [nohayItem, setNoHayItem] = useState(false)
 
     useEffect(() => {
 
@@ -23,12 +24,16 @@ const ItemDetailContainer = () => {
                 setItemDetail({id: snapshot.id, ...snapshot.data()})
                 setLoading(false)
             }
+            else
+                setNoHayItem(true)
         })
     }, [itemId])
 
     return (
     <div className="mt-20 sm:mt-24">
-        {loading ? <Spinner/> : <ItemDetail item={itemDetail}/> }
+        {
+            loading ? nohayItem ? <div className="mt-48 text-[1.5rem] xl:text-[3rem] font-medium text-paleta-colorNavbar">Error: El producto no existe</div> : <Spinner/> : <ItemDetail item={itemDetail}/> 
+        }
     </div>
   )
 }
