@@ -78,7 +78,7 @@ return (
                 </button>
             </div>
             : 
-            <div className="hero min-h-screen bg-paleta-colorFondoForm mt-2 mb-8 text-paleta-colorTextoCard shadow-2xl shadow-paleta-colorShadowItem">
+            <div className="hero min-h-screen bg-paleta-colorFondoForm mt-[-3.5rem] mb-8 text-paleta-colorTextoCard shadow-2xl shadow-paleta-colorShadowItem">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-bold">Completá el formulario</h1>

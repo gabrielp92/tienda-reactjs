@@ -4,7 +4,7 @@ const Hero = () => {
   
     return (
         <>
-            <img className="sm:object-contain sm:h-screen mt-[4rem] mb-[2rem] sm:mt-[-6.2rem] sm:mb-[-7rem] md:mt-[-4.8rem] md:mb-[-5.25rem] lg:mt-[-2.5rem] lg:mb-[-2.5rem] xl:mt-[-2rem] xl:mb-[-2rem] 2xl:mt-[-4.5rem] 2xl:mb-[-2rem]" src={source} alt='banner'/>
+            <img className="sm:object-contain sm:w-screen mb-4 md:mb-14" src={source} alt='banner'/>
         </>
       )
 }

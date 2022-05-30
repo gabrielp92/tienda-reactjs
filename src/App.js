@@ -14,10 +14,10 @@ function App() {
     <CartContextProvider>
       <BrowserRouter>
         <div className="App bg-paleta-colorFondoContainer">
-          <header>
+          <header className='min-h-[4rem] h-[4rem] max-h-[4rem]'>
             <NavBar/>
           </header>
-          <main className="App-header text-paleta-colorFondoCard bg-paleta-colorFondoContainer">
+          <main className="App-main text-paleta-colorFondoCard bg-paleta-colorFondoContainer">
             <Routes>
               <Route path='/' element={<ItemListContainer/>}/>
               <Route path='/tienda-reactjs' element={<ItemListContainer/>}/> {/* para que funcione bien gh-pages */}
@@ -27,8 +27,8 @@ function App() {
               <Route path='/cart/check-out' element={<SaveCompra/>}/>
             </Routes>
           </main>
-          <Footer/>
-        </div>   
+          <Footer/> 
+        </div>
       </BrowserRouter>
     </CartContextProvider>
   );

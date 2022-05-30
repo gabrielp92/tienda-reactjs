@@ -7,7 +7,7 @@ const Cart = () => {
   const {cart, removeItem, calcularCantProductos, clear, subTotal, lessQuantity, moreQuantity} = useContext(CartContext)
 
   return (
-    <div className="mt-20 sm:mt-24">
+    <div className="mt-4 sm:mt-12">
       {
         cart.length === 0 ? (
           <div className="text-paleta-colorFondoCard mt-40">
