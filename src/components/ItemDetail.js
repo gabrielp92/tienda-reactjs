@@ -23,7 +23,7 @@ const ItemDetail = ({item}) => {
     <>
       <div className="card lg:card-side bg-base-100 shadow-2xl shadow-paleta-colorShadowItem content-start mb-8 mt-2 mx-2 lg:mx-4">
         <figure className="touch-manipulation"><img className="w-4/6 lg:w-auto" src={item.imgUrl} alt="Imagen producto"/></figure>
-        <div className="card-body text-paleta-colorTextoCard">
+        <div className="card-body text-paleta-colorTextoCard bg-paleta-colorFondoCard">
           <h2 className="card-title text-lg lg:text-4xl justify-center">{item.titulo}</h2>
           <p className="lg:text-4xl">${item.precio},00</p>
           <p className="text-justify text-lg lg:text-2xl md:mt-4">{item.descripcion}</p>
