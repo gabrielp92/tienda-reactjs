@@ -13,7 +13,7 @@ module.exports = {
         'colorNavbarMedio':'#7f1d1d', //Red 900
         'colorFondoWidget': '#e4e4e7',
         'colorFondo': '#F4F4F5',  // Zinc 100
-        'colorFondoContainer': '#818479',
+        'colorFondoContainer': '#D7AAA2',
         'colorShadowItem': '#161416',
         'colorButton': '#161416',
         'colorButtonHover': '#161416',
