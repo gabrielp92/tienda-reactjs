@@ -14,6 +14,7 @@ module.exports = {
         'colorFondoWidget': '#e4e4e7',
         'colorFondo': '#F4F4F5',  // Zinc 100
         'colorFondoContainer': '#D7AAA2',
+        'colorFondoForm': '#f5f5f5',
         'colorShadowItem': '#161416',
         'colorButton': '#161416',
         'colorButtonHover': '#161416',

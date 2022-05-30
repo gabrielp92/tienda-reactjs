@@ -78,13 +78,13 @@ return (
                 </button>
             </div>
             : 
-            <div className="hero min-h-screen bg-base-200 mt-2 mb-8 text-paleta-colorTextoCard shadow-2xl shadow-paleta-colorShadowItem">
+            <div className="hero min-h-screen bg-paleta-colorFondoForm mt-2 mb-8 text-paleta-colorTextoCard shadow-2xl shadow-paleta-colorShadowItem">
                 <div className="hero-content flex-col lg:flex-row-reverse">
                     <div className="text-center lg:text-left">
                         <h1 className="text-4xl md:text-5xl font-bold">Completá el formulario</h1>
                         <p className="py-6 text-xl md:text-3xl">Para finalizar la compra primero debe completar este formulario con sus datos de contacto.</p>
                     </div>
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-paleta-colorFondoCard">
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">
