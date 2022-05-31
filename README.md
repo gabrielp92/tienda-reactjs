@@ -4,7 +4,7 @@ ___
 El proyecto se basa en un e-commerce que posee las siguientes características:
 
 - Barra de navegación: link por categoría y carrito de compras (para los links se utiliza React Router).
-- Carrito de compras.
+- Carrito de compras: los productos en el carrito se mantienen aunque se salga del sitio o se recargue la página (local storage).
 - Detalle de los productos.
 - Filtrado de vistas por categoría.
 - Listado de todos los artículos disponibles en la página principal.
