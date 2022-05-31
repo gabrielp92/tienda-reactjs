@@ -1,4 +1,5 @@
-import { createContext, useState } from "react"
+import { createContext, useEffect } from "react"
+import { useLocalStorage } from "../components/useLocalStorage";
 
 export const CartContext = createContext({
   cart: [],
@@ -6,8 +7,13 @@ export const CartContext = createContext({
 
 export const CartContextProvider = ( {children} ) => {
 
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useLocalStorage('cart', [])
 
+  useEffect(() => {
+    setCart(cart);
+  }, [cart])
+  
+  
   // agrega la cantidad quantity de item al carrito
   const addItem = (item,quantity) => {
 
